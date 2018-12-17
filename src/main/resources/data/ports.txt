@@ -1,0 +1,23 @@
+Service                 Port(s)
+────────────────────────────────────────────────────────
+DHCP                    67/UDP, 68/UDP
+DNS                     53/UDP, 53/TCP
+Elasticsearch           9200/TCP
+FTP                     20/TCP, 21/TCP
+HTTP                    80/TCP
+HTTPS                   443/TCP
+IMAP                    143/TCP
+MSSQL                   1433/TCP
+MySql                   3306/TCP
+Openvpn                 1194/TCP
+Oracle                  1521/TCP
+POP3                    110/TCP
+PostgreSQL              5432/TCP
+Redis                   6379/TCP
+SMTP                    25/TCP
+SNMP                    161/UDP, 162/UDP
+Solr                    8983/TCP
+SSH                     22/TCP
+TFTP                    69/TCP
+VNC                     5500/TCP
+Zookeeper               2181/TCP
