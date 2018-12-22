@@ -10,6 +10,8 @@ import org.springframework.shell.standard.ShellOption;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.InetSocketAddress;
+import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -34,5 +36,28 @@ public class UtilityCommands {
             return "OK";
         }
         return result;
+    }
+
+    @ShellMethod("Check internet connection")
+    public String onlineStatus() {
+        String host = "8.8.8.8";
+        int port = 53;
+        int timeout = 2500;
+        return isHostReachable(host, port, timeout) ? "\nOnline" : "\nOffline";
+    }
+
+    @ShellMethod("Check internet connection")
+    public String testService(@ShellOption String host, @ShellOption Integer port) {
+        int timeout = 2500;
+        return isHostReachable(host, port, timeout) ? "\nService is reachable" : "\nService is NOT reachable";
+    }
+
+    private boolean isHostReachable(String host, Integer port, Integer timeout) {
+        try (Socket socket = new Socket()) {
+            socket.connect(new InetSocketAddress(host, port), timeout);
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
     }
 }
