@@ -6,7 +6,7 @@
 
     <groupId>at.khassraf</groupId>
     <artifactId>dev-toolkit</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <name>Dev Toolkit</name>
 
     <parent>
@@ -15,36 +15,44 @@
         <version>2.1.1.RELEASE</version>
     </parent>
 
+    <properties>
+        <spring-shell.version>2.0.0.RELEASE</spring-shell.version>
+        <guava.version>27.0.1-jre</guava.version>
+        <jbcrypt.version>0.4</jbcrypt.version>
+        <gson.version>2.8.5</gson.version>
+        <nanohttpd.version>2.2.0</nanohttpd.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.shell</groupId>
             <artifactId>spring-shell-starter</artifactId>
-            <version>2.0.0.RELEASE</version>
+            <version>${spring-shell.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
-            <version>0.4</version>
+            <version>${jbcrypt.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.5</version>
+            <version>${gson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.nanohttpd</groupId>
             <artifactId>nanohttpd</artifactId>
-            <version>2.2.0</version>
+            <version>${nanohttpd.version}</version>
         </dependency>
         <dependency>
             <groupId>org.nanohttpd</groupId>
             <artifactId>nanohttpd-webserver</artifactId>
-            <version>2.2.0</version>
+            <version>${nanohttpd.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>27.0.1-jre</version>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 
